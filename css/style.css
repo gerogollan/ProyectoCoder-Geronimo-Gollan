@@ -1,0 +1,485 @@
+/** Archivo CSS para darle estilos a las etiquetas de nuestro HTML**/
+
+/*
+Alumno:Geronimo Gollan
+Archivo: index.html
+Correo: gerogollan11@gmail.com
+*/
+
+/**Fuente "ROBOTO" vinculada con Google font**/
+* {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-size: 12px;
+}
+
+/** esto hace que todos los links de la web pierdan la barrita de abajo**/
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* esto hace que cada vez que ponga el cursor arriba de un enlace este reciba las propiedades dentro de este codigo */
+a:hover {
+  color: rgb(102, 102, 102);
+  text-decoration: underline #ffd901;
+}
+
+/* esto le da un espacio al logo para que no se pegue a la barra de busqueda del navegador */
+.logo {
+  margin: 10px;
+}
+
+/* esto alinea los elementos dentro del navegador para que esten */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navega {
+  display: flex;
+  justify-content: center;
+}
+
+/** esto hace que la lista del nav del header se asienta en el medio de la pagina**/
+ul.navega li {
+  margin: 10px;
+  list-style-type: none;
+  font-weight: 800;
+  display: inline;
+  padding-right: 0.5em;
+}
+
+/* Esto le da a los links dentro del nav que tiene la etiqueta "navega" un tamaño de fuente y un espaciado */
+.navega a {
+  font-size: 10px;
+  /* padding: 10px; */
+}
+
+/** esto hace que la foto del banner siempre ocupe el 100% del ancho del navegador**/
+.banner {
+  max-width: auto;
+  max-height: 500px;
+  min-width: 100%;
+  margin-bottom: 20px;
+}
+
+/* esto hace que el primer parrafo dentro del hindex se acomode en columna*/
+.parrafo {
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+}
+
+/* esto alinea todas las etiquetas que tengan la class de "centro" en el centro de la pantalla */
+.centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* esto afecta a todos los h1 y h2 con la ","  y les agrega una linea y tamaño de fuente */
+h1,
+h2 {
+  font-size: 230%;
+}
+
+#h1index {
+  margin-bottom: 20px;
+}
+
+/* esto posiciona el h2 del index y le da tamaño */
+#h2index {
+  margin-bottom: 40px;
+  font-size: medium;
+}
+/* page de animales */
+#h1-animales {
+  /* position: absolute;
+  top: 74%;
+  left: 1.5%; */
+  color: #000000;
+  text-transform: uppercase;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+#h2-animales {
+  /* position: absolute;
+  top: 80%;
+  left: 1.5%; */
+  font-size: medium;
+}
+/* page de ciencia */
+#h1-ciencia {
+  /* position: absolute;
+  top: 77%;
+  left: 1.5%; */
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+#h2-ciencia {
+  /* position: absolute;
+  top: 83%;
+  left: 1.5%; */
+  color: rgb(0, 0, 0);
+  font-size: medium;
+}
+
+/* page de medio ambiente */
+#h1-ambiente {
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+#h2-ambiente {
+  /* position: absolute;
+  top: 82%;
+  left: 3%; */
+  color: rgb(0, 0, 0);
+  font-size: medium;
+}
+
+/* page de contacto */
+#h1-contacto {
+  /* position: absolute;
+  top: 75%;
+  left: 3%; */
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+#h2-contacto {
+  /* position: absolute;
+  top: 82%;
+  left: 3%; */
+  color: rgb(0, 0, 0);
+  font-size: medium;
+}
+/* cierre del posicionamiento de los H1 Y H2 */
+
+/* esto hace que en cada parte que se utilize el strong se le apliquen estas propiedades. */
+strong {
+  padding: 5px;
+  background-color: #ffd901;
+  text-decoration: underline;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
+
+/* un poco de margin para el mapa de la page de contacto */
+#maps {
+  margin: 20px;
+}
+/* tamaño de fuente para los parrafos dentro de span */
+span p {
+  font-size: 10px;
+}
+
+/* esto hace que todos los H3 que esten dentro de un section, tengan un tamaño de fuente de 200% */
+section h3 {
+  color: #fff;
+  font-size: 200%;
+  position: relative;
+  top: 10px;
+  text-decoration: underline #ffd901 5px;
+}
+
+/* estilos para los h3, se usan en el index */
+h3 {
+  display: inline;
+
+  text-decoration: underline #ffd901 5px;
+  padding: 20px 0px;
+  text-transform: uppercase;
+}
+
+.h3-bc {
+  background-color: rgb(3, 3, 3);
+  padding: 6px 0;
+}
+
+/* estilos para el apartado de ciencia del hindex */
+#ciencia {
+  padding: 20px 0;
+  margin-top: 15px;
+  background-color: black;
+  color: #fff;
+  border-bottom: #ffd901 5px solid;
+  border-top: #ffd901 5px solid;
+}
+
+/* esto le agrega estilos al form de la pagina de contactos */
+.form {
+  padding-bottom: 20px;
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+}
+
+/* aca quise agrandar el boton de enviar de la page de contacto pero no supe como */
+#input-enviar {
+  padding: 5px 20px;
+}
+
+/* esto coloca a los textos con el id "rights" en el lado derecho de la pagina */
+.rights {
+  margin: 0;
+  text-align: right;
+  order: 3;
+  /* esto cambia el orden del elemento, lo moverá al lado derecho */
+}
+
+/* esto hace que el texto de los footers se mantenga pequeño */
+.ft-text {
+  font-size: xx-small;
+  align-content: end;
+}
+
+/* esto coloca los creditos de las fotografias en negrita */
+.credits {
+  font-weight: bold;
+  justify-content: left;
+  margin: 5px 5px 20px 5px;
+}
+
+.redaction {
+  justify-content: right;
+  text-decoration: underline;
+}
+
+/* Espacio utilizado para las Galerias echas con GRID */
+/* galeria animales */
+.grid-container-animales {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 3fr 3fr;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.grid-container-animales img {
+  height: 100%;
+  width: 100%;
+}
+
+/* galeria ciencia */
+.grid-container-ciencia {
+  display: grid;
+  grid-template-columns: repeat(8, 3fr);
+  grid-template-rows: 4fr;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.grid-container-ciencia img {
+  height: 100%;
+  width: 100%;
+}
+
+.grid-ciencia-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 1 3;
+}
+
+.grid-ciencia-2 {
+  grid-column-start: 3;
+  grid-column-end: 7;
+  grid-row: 1 2;
+}
+
+.grid-ciencia-3 {
+  grid-column-start: 7;
+  grid-column-end: 9;
+  grid-row: 1 2;
+}
+/* galeria medio ambiente */
+.grid-container-medio {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 3fr 3fr;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.grid-container-medio img {
+  height: 100%;
+  width: 100%;
+}
+
+/* cierre de galerías GRID */
+
+/* esto es para que el footer se vea ordenado y estetico */
+footer {
+  display: flex;
+  /* esto utiliza flexbox para organizar los elementos */
+  justify-content: space-between;
+  /* esto distribuye los elementos de manera uniforme */
+  align-items: flex-end;
+  /* esto centra verticalmente los elementos */
+}
+
+.contacto {
+  order: 1;
+  /* esto cambia el orden del elemento, lo moverá al lado izquierdo */
+}
+
+.bottomlogo {
+  width: 15%;
+  /*esto le da el alto y el ancho para que se vea pequeño y acorde al diseño*/
+  height: 7%;
+  order: 2;
+  /* esto cambia el orden del elemento, lo mantendrá en el centro */
+}
+
+/* esto alinea todo los objetos al centro de la pantalla */
+h3,
+p,
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* esto alinea las imagenes de todas las pages */
+img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* le agrega margen a todos los parrafos */
+p {
+  margin: 20px;
+}
+
+/* esto modifica el boton de enviar en el form de la pagina de contactos para que el estilo sea igual al de la página */
+.btn-color {
+  background-color: #ffd901;
+}
+.btn-color:hover {
+  background-color: #b69b01;
+}
+
+.btn-color:active {
+  background-color: #ffd901;
+}
+/* fin btn-contacto */
+
+/* MEDIA QUERYS! */
+
+/* este media query hace que el header se apile en columna */
+@media only screen and (max-width: 700px) {
+  header {
+    flex-direction: column;
+  }
+  /* code que acomoda la galeria de la page ciencia a en pantallas por debajo de los 700px */
+  .grid-container-animales {
+    margin: 0 0;
+  }
+
+  .grid-container-ciencia {
+    grid-template-rows: 4fr 4fr;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+
+  .grid-ciencia-1 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .grid-ciencia-2 {
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row: 0 1;
+  }
+
+  .grid-ciencia-3 {
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row: 2 3;
+  }
+  /* fin de responsive de galeria de la page ciencia */
+}
+
+/* este media query hace que el h1 del index apague el margin que rompía la pagina */
+@media only screen and (max-width: 586px) {
+  #h1index {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* responsive galeria animales */
+  .grid-container-animales {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-container-animales div img {
+    padding: 10px 0px;
+  }
+  /* fin responsive galeria animales */
+  /* Responsive galeria medio ambiente */
+  .grid-container-medio {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-container-medio div img {
+    padding: 10px 0px;
+  }
+  /* fin de responsive galeria medio ambiente */
+}
+
+/* este media query hace que el nav dentro del header pierda el padding para que quede mas compacto y no rompa */
+@media only screen and (max-width: 400px) {
+  .navega {
+    padding: 0;
+  }
+  /* para modifiicar el footer en resoluciones pequeñas, lo coloca en columna */
+  .ft-text {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* este code hace que el texto del footer pierda el margin para poder pegarse al borde */
+  .contacto-footer {
+    margin-bottom: 10px;
+  }
+
+  /* este code aumenta el tamaño del logo del footer */
+  .bottomlogo {
+    width: 44%;
+  }
+
+  /* responsive galeria ciencia */
+  /* esto hace que la galeria de imagenes se posicione en columnas a los 400px */
+  .grid-container-ciencia {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+  }
+  /* fin de responsive galeria ciencia */
+}
+
+/* este media query se aplica en la etiqueta del nav para que se posicione en columnas*/
+@media only screen and (max-width: 350px) {
+  .navega {
+    display: flex;
+    flex-direction: column;
+  }
+}
