@@ -1,0 +1,206 @@
+// Archivo SCSS para darle estilos a las etiquetas de nuestro HTML
+/*
+Alumno:Geronimo Gollan
+Correo: gerogollan11@gmail.com
+*/
+
+@import "_font";
+@import "variables";
+@import "_header";
+@import "_home";
+@import "_footer";
+@import "_pages";
+@import "_galerys";
+@import "_maps";
+
+
+
+// Configuraciones de estilos generales utilizados en todas las paginas
+
+/* esto alinea las imagenes de todas las pages */
+img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* le agrega margen a todos los parrafos */
+p {
+    margin: 20px;
+  }
+
+ /* esto alinea todo los objetos al centro de la pantalla */
+h3,
+p,
+a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+//* animaciones *//
+// animacion de zoom en fotos con la etiqueta .anim-img //
+.anim-img:hover{
+  transform:scale(1.05 , 1.05) ;
+   transition: 1s;
+  }
+ 
+ 
+   // animacion de fade-in para el logo del header al momento de iniciar la page*/
+   @keyframes fadein {
+     0% {opacity:0;}
+     100% {opacity: 1;}
+     
+   }
+    .logo{
+     animation:fadein;
+     animation-timing-function: ease-in;
+     animation-duration: 2s;
+    }
+ 
+ 
+   /*fin de animacion de fade in*/
+ /* fin de animaciones, si hago un partial para las animaciones no funcionan.*/
+ 
+
+
+/* esto hace que en cada parte que se utilize el strong se le apliquen estas propiedades. */
+strong {
+    padding: 5px;
+    background-color: $primary-color;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-right: 10px;
+  }
+
+  /* esto hace que el primer parrafo dentro del hindex se acomode en columna*/
+.parrafo {
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* esto alinea todas las etiquetas que tengan la class de "centro" en el centro de la pantalla */
+.centro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* tamaño de fuente para los parrafos dentro de span */
+span p {
+    font-size: 10px;
+  }
+
+
+ // MEDIA QUERYS! sí lo pongo en un partial no funcionan /
+
+/* este media query hace que el header se apile en columna */
+@media only screen and (max-width: 700px) {
+  header {
+    flex-direction: column;
+  }
+  /* code que acomoda la galeria de la page ciencia a en pantallas por debajo de los 700px */
+  .grid-container-animales {
+    margin: 0 0;
+  }
+
+  .grid-container-ciencia {
+    grid-template-rows: 4fr 4fr;
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+
+  .grid-ciencia-1 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .grid-ciencia-2 {
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row: 0 1;
+  }
+
+  .grid-ciencia-3 {
+    grid-column-start: 5;
+    grid-column-end: 8;
+    grid-row: 2 3;
+  }
+  /* fin de responsive de galeria de la page ciencia */
+}
+
+/* este media query hace que el h1 del index apague el margin que rompía la pagina */
+@media only screen and (max-width: 586px) {
+  #h1index {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* responsive galeria animales */
+  .grid-container-animales {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-container-animales div img {
+    padding: 10px 0px;
+  }
+  /* fin responsive galeria animales */
+  /* Responsive galeria medio ambiente */
+  .grid-container-medio {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-container-medio div img {
+    padding: 10px 0px;
+  }
+  /* fin de responsive galeria medio ambiente */
+}
+
+/* este media query hace que el nav dentro del header pierda el padding para que quede mas compacto y no rompa */
+@media only screen and (max-width: 400px) {
+  .navega {
+    padding: 0;
+  }
+  /* para modifiicar el footer en resoluciones pequeñas, lo coloca en columna */
+  .ft-text {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* este code hace que el texto del footer pierda el margin para poder pegarse al borde */
+  .contacto-footer {
+    margin-bottom: 10px;
+  }
+
+  /* este code aumenta el tamaño del logo del footer */
+  .bottomlogo {
+    width: 44%;
+  }
+
+  /* responsive galeria ciencia */
+  /* esto hace que la galeria de imagenes se posicione en columnas a los 400px */
+  .grid-container-ciencia {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+  }
+  /* fin de responsive galeria ciencia */
+}
+
+/* este media query se aplica en la etiqueta del nav para que se posicione en columnas*/
+@media only screen and (max-width: 350px) {
+  .navega {
+    display: flex;
+    flex-direction: column;
+  }
+}

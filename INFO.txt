@@ -1,7 +1,3 @@
-ENTREGA 1: DESAROLLO WEB
+ENTREGA 3: DESAROLLO WEB
 Alumno: Geronimo Gollan
 Correo: gerogollan11@gmail.com
-
-
-
-Yellow Main Color: 255, 217, 1

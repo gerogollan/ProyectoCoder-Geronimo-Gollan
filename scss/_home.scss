@@ -1,0 +1,68 @@
+// Partial dedicado a la pagina principal
+
+
+ /* esto estiliza los h1 */
+h1 {
+  border-left: $primary-color 5px solid;
+  font-family: "Roboto Condensed", sans-serif; 
+}
+
+
+//* EXTEND EJEMPLO */
+.h1style {
+  @extend h1;
+  font-weight: 700; 
+  text-transform: uppercase;
+}
+// EXTEND EJEMPLO 
+
+
+/* esto estiliza los h2 */
+.h2style {
+padding: 0px 0px 20px 0px;
+font-size: large;
+
+  
+}
+ 
+/** esto hace que la foto del banner siempre ocupe el 100% del ancho del navegador**/
+.banner {
+    max-width: auto;
+    max-height: 700px;
+    min-width: 100%;
+    margin-bottom: 20px;}
+  
+
+  /* estilos para los h3, se usan en el home */
+
+h3 {
+    display: inline;
+    text-decoration: underline $primary-color 5px;
+    padding: 20px 0px;
+    text-transform: uppercase;
+  }
+  
+  .h3-bc {
+    padding: 6px 0;
+    background-image: linear-gradient(to right, black, rgb(31, 30, 30));
+  }
+  
+  /* estilos para el apartado de ciencia del hindex */
+  #ciencia {
+    padding: 20px 0;
+    margin-top: 15px;
+    background-image: linear-gradient(to right, black, rgb(31, 30, 30));
+    color: #fff;
+    border-bottom: $primary-color 5px solid;
+    border-top: $primary-color 5px solid;
+  }
+  
+
+  /* esto hace que todos los H3 que esten dentro de un section, tengan un tamaño de fuente de 200% */
+section h3 {
+    color: #fff;
+    font-size: 200%;
+    position: relative;
+    top: 10px;
+    text-decoration: underline $primary-color 5px;
+  }

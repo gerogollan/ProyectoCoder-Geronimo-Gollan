@@ -1,0 +1,16 @@
+// PARTIAL dedicado a los mapas 
+
+
+// Definición del mapa de colores
+$colors: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  body-bg: #ffffff
+);
+
+
+//  color de body de la pagina, utilizo blanco pero si alteras el valor de arriba se aplica 
+// es para el ejemplo de uso de maps
+body {
+    background-color: map-get($colors, body-bg);
+  }

@@ -1,0 +1,42 @@
+// PARTIAL dedicado a los footers
+
+ /* esto es para que el footer se vea ordenado y estetico */
+
+ footer {
+    display:flex;
+    /* esto utiliza flexbox para organizar los elementos */
+    justify-content: space-between;
+    /* esto distribuye los elementos de manera uniforme */
+    align-items: flex-end;
+    /* esto centra verticalmente los elementos */
+  }
+
+/* esto hace que el texto de los footers se mantenga pequeño */
+  .ft-text {
+    font-size: small;
+    align-content: end;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+/* esto coloca a los textos con el id "rights" en el lado derecho de la pagina */
+.rights {
+    margin: 0;
+    text-align: right;
+    order: 3;
+    /* esto cambia el orden del elemento, lo moverá al lado derecho */
+  }
+  
+  
+
+  .contacto {
+    order: 1;
+    /* esto cambia el orden del elemento, lo moverá al lado izquierdo */
+  }
+
+  .bottomlogo {
+    width: 15%;
+    /*esto le da el alto y el ancho para que se vea pequeño y acorde al diseño*/
+    height: 7%;
+    order: 2;
+    /* esto cambia el orden del elemento, lo mantendrá en el centro */
+  }

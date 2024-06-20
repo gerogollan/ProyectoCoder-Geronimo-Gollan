@@ -1,0 +1,52 @@
+// PARTIAL dedicado a los estilos del header //
+
+
+/** esto hace que todos las etiquetas a de la web pierdan la barrita de abajo**/
+// Ejemplo de anidamiento y de &
+a {
+    text-decoration: none;
+    color: black;  
+    /* esto hace que cada vez que ponga el cursor arriba de un enlace este reciba las propiedades dentro de este codigo */
+    &:hover{
+        color: $secondary-color;
+        text-decoration: underline $primary-color;
+      }
+  }
+
+
+   /* esto le da un espacio al logo para que no se pegue a la barra de busqueda del navegador */
+.logo {
+    margin: 10px;
+  }
+
+  
+
+
+  /* esto alinea los elementos dentro del navegador para que esten */
+  //* otro ejemplo de anidacion */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    ul.navega {
+        a{   
+        /* Esto le da a los links dentro del nav que tiene la etiqueta "navega" un tamaño de fuente y un espaciado */
+            font-size: 10px;
+        }
+        li{
+            margin: 10px;
+            list-style-type: none;
+            font-weight: 800;
+            display: inline;
+            padding-right: 0.5em;
+        }
+    }
+
+
+  .navega {
+    display: flex;
+    justify-content: center;
+  }
+  

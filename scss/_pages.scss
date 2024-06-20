@@ -1,0 +1,58 @@
+// Partial utilizado para estilos en las pages
+
+
+
+
+/*  estilos para las redacciones que van en las pages */
+.redaction {
+    justify-content: right;
+    text-decoration: underline;
+  }
+
+
+/*   page contacto */
+/* un poco de margin para el map de la page de contacto */
+#maps {
+    margin: 20px;
+  }
+   
+  /* esto le agrega estilos al form de la pagina de contactos */
+.form {
+    padding-bottom: 20px;
+    color: white;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+  }
+
+  /* esto modifica el boton de enviar en el form de la pagina de contactos para que el estilo sea igual al de la página */
+.btn-color {
+    background-color: $primary-color;
+  }
+  .btn-color:hover {
+    background-color: #b69b01;
+  }
+  
+  .btn-color:active {
+    background-color: $primary-color;
+  }
+  /* fin btn-contacto */
+  // fin de contacto//
+
+  /* tamaño de fuente para los parrafos dentro de span */
+span p {
+    font-size: 10px;
+  }
+
+  /* esto coloca los creditos de las fotografias en negrita */
+.credits {
+    font-weight: bold;
+    justify-content: left;
+    margin: 5px 5px 20px 5px;
+  }
+  
+  .redaction {
+    justify-content: right;
+    text-decoration: underline;
+  }
