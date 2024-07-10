@@ -1,9 +1,4 @@
 // Archivo SCSS para darle estilos a las etiquetas de nuestro HTML
-/*
-Alumno:Geronimo Gollan
-Correo: gerogollan11@gmail.com
-*/
-
 @import "_font";
 @import "variables";
 @import "_header";
@@ -22,12 +17,14 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 
 /* le agrega margen a todos los parrafos */
 p {
     margin: 20px;
+    font-weight: 600;
   }
 
  /* esto alinea todo los objetos al centro de la pantalla */
@@ -39,27 +36,41 @@ a {
   align-items: center;
 }
 
+a {
+  overflow:hidden;  
+}
 
 //* animaciones *//
+
 // animacion de zoom en fotos con la etiqueta .anim-img //
 .anim-img:hover{
   transform:scale(1.05 , 1.05) ;
    transition: 1s;
+  
   }
  
  
    // animacion de fade-in para el logo del header al momento de iniciar la page*/
-   @keyframes fadein {
+@keyframes fadein {
      0% {opacity:0;}
      100% {opacity: 1;}
      
-   }
-    .logo{
+ }
+   
+.logo{
      animation:fadein;
      animation-timing-function: ease-in;
      animation-duration: 2s;
-    }
+ }
  
+//  animacion para el banner del index, ahora no genera scroll lateral 
+.anim-banner:hover{
+  transform: scale(1.05, 1.05);
+  transition-duration: 1s;
+  box-shadow: 0px 8px 12px -6px rgba(0, 0, 0, 0.8);
+  
+}
+
  
    /*fin de animacion de fade in*/
  /* fin de animaciones, si hago un partial para las animaciones no funcionan.*/
@@ -70,7 +81,6 @@ a {
 strong {
     padding: 5px;
     background-color: $primary-color;
-    text-decoration: underline;
     text-transform: uppercase;
     margin-right: 10px;
   }
@@ -99,6 +109,14 @@ span p {
 
 /* este media query hace que el header se apile en columna */
 @media only screen and (max-width: 700px) {
+
+
+ // /* esto le da un tamaño mas pequeño a los h3 */
+section.h3{
+  font-size: 240%;
+}
+
+
   header {
     flex-direction: column;
   }
@@ -166,8 +184,33 @@ span p {
 
 /* este media query hace que el nav dentro del header pierda el padding para que quede mas compacto y no rompa */
 @media only screen and (max-width: 400px) {
+
+
+h3{
+  font-size: 200%;
+}
+
+
+   .h2style.strong-h1  {
+    margin: 0;
+    padding: 2px;
+  }
+
   .navega {
     padding: 0;
+  }
+
+ p.rights{
+     margin: 0;
+ }
+
+ img.bottomlogo{
+  padding:5px;
+ }
+
+  // esto le quita el margin al A del footer para que no se rompa 
+  footer a {
+    margin: 0;
   }
   /* para modifiicar el footer en resoluciones pequeñas, lo coloca en columna */
   .ft-text {

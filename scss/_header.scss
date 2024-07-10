@@ -10,6 +10,7 @@ a {
     &:hover{
         color: $secondary-color;
         text-decoration: underline $primary-color;
+    
       }
   }
 
@@ -24,13 +25,24 @@ a {
 
   /* esto alinea los elementos dentro del navegador para que esten */
   //* otro ejemplo de anidacion */
+  
 header {
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
+      padding: 10px; /* Espaciado interno */
+      background-color: #fff; /*color de fondo blanco*/
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+      // Para asegurar que el header esté por encima de otros elementos
+    position: relative;
+    z-index: 10;
+    
 }
 
     ul.navega {
+         margin-bottom: 0px;
+         padding-left: 0px;
         a{   
         /* Esto le da a los links dentro del nav que tiene la etiqueta "navega" un tamaño de fuente y un espaciado */
             font-size: 10px;

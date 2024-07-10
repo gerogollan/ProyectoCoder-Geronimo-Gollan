@@ -1,8 +1,4 @@
 @charset "UTF-8";
-/*
-Alumno:Geronimo Gollan
-Correo: gerogollan11@gmail.com
-*/
 * {
   font-family: "Roboto Condensed", sans-serif;
   font-optical-sizing: auto;
@@ -32,8 +28,17 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 10px; /* Espaciado interno */
+  background-color: #fff; /*color de fondo blanco*/
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  z-index: 10;
 }
 
+ul.navega {
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
 ul.navega a {
   /* Esto le da a los links dentro del nav que tiene la etiqueta "navega" un tamaño de fuente y un espaciado */
   font-size: 10px;
@@ -51,15 +56,34 @@ ul.navega li {
   justify-content: center;
 }
 
+body {
+  background-image: linear-gradient(to right, black, #1f1e1e);
+}
+
+main {
+  background-color: white;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+section {
+  background-image: linear-gradient(to right, black, #1f1e1e);
+  color: white;
+}
+
 /* esto estiliza los h1 */
 h1, .h1style {
   border-left: #ffd901 5px solid;
   font-family: "Roboto Condensed", sans-serif;
 }
 
+h2 {
+  font-weight: 700;
+}
+
 .h1style {
   font-weight: 700;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 /* esto estiliza los h2 */
@@ -68,11 +92,15 @@ h1, .h1style {
   font-size: large;
 }
 
+.strong-h1 {
+  margin: 0;
+}
+
 /** esto hace que la foto del banner siempre ocupe el 100% del ancho del navegador**/
-.banner {
-  max-width: auto;
-  max-height: 700px;
-  min-width: 100%;
+.banner, .banner-pages {
+  width: 100%;
+  height: 363px;
+  object-fit: cover;
   margin-bottom: 20px;
 }
 
@@ -84,17 +112,22 @@ h3 {
   text-transform: uppercase;
 }
 
+.h3-ciencia {
+  color: #000000;
+}
+
 .h3-bc {
-  padding: 6px 0;
-  background-image: linear-gradient(to right, black, rgb(31, 30, 30));
+  padding: 10px 0;
+  background-image: linear-gradient(to right, black, #1f1e1e);
 }
 
 /* estilos para el apartado de ciencia del hindex */
 #ciencia {
   padding: 20px 0;
   margin-top: 15px;
-  background-image: linear-gradient(to right, black, rgb(31, 30, 30));
-  color: #fff;
+  background-image: url(../sources/bc-1.jpg);
+  background-size: 100% 100%;
+  color: #000000;
   border-bottom: #ffd901 5px solid;
   border-top: #ffd901 5px solid;
 }
@@ -102,20 +135,39 @@ h3 {
 /* esto hace que todos los H3 que esten dentro de un section, tengan un tamaño de fuente de 200% */
 section h3 {
   color: #fff;
-  font-size: 200%;
+  font-size: 300%;
   position: relative;
   top: 10px;
   text-decoration: underline #ffd901 5px;
 }
 
+section.section-h3-index {
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 400px) {
+  .h2style .strong-h1 {
+    margin: 0;
+    padding: 2px;
+  }
+}
 /* esto es para que el footer se vea ordenado y estetico */
 footer {
+  background-image: linear-gradient(to right, black, #1f1e1e);
+  color: white;
+  padding-top: 10px;
+  border-top: white 1px solid;
   display: flex;
   /* esto utiliza flexbox para organizar los elementos */
   justify-content: space-between;
   /* esto distribuye los elementos de manera uniforme */
-  align-items: flex-end;
+  align-items: center;
   /* esto centra verticalmente los elementos */
+  padding-bottom: 5px;
+}
+footer a {
+  margin: 0px 5px 0px 20px;
+  color: white;
 }
 
 /* esto hace que el texto de los footers se mantenga pequeño */
@@ -128,10 +180,14 @@ footer {
 
 /* esto coloca a los textos con el id "rights" en el lado derecho de la pagina */
 .rights {
-  margin: 0;
+  margin: 0px 20px 0px 5px;
   text-align: right;
   order: 3;
   /* esto cambia el orden del elemento, lo moverá al lado derecho */
+  background-color: #ffd901;
+  color: black;
+  border: 3px #ffd901;
+  border-radius: 2px;
 }
 
 .contacto {
@@ -140,11 +196,19 @@ footer {
 }
 
 .bottomlogo {
+  padding-bottom: 5px;
+  max-width: 30px;
+  max-height: 50px;
   width: 15%;
   /*esto le da el alto y el ancho para que se vea pequeño y acorde al diseño*/
   height: 7%;
   order: 2;
   /* esto cambia el orden del elemento, lo mantendrá en el centro */
+}
+
+.banner-pages {
+  height: 100%;
+  width: 100%;
 }
 
 /*  estilos para las redacciones que van en las pages */
@@ -159,6 +223,29 @@ footer {
   margin: 20px;
 }
 
+section.maps {
+  background-image: linear-gradient(to right, black, #1f1e1e);
+}
+
+/* esto le agrega un espacio entre el formulario y el footer para que se vea mejor */
+.pre-map-text {
+  padding-top: 10px;
+  margin: 20px 20px 10px 20px;
+}
+
+.pre-form-text {
+  padding-bottom: 10px;
+}
+
+form.container {
+  color: white;
+  margin-bottom: 40px;
+}
+
+label {
+  color: white;
+}
+
 /* esto le agrega estilos al form de la pagina de contactos */
 .form {
   padding-bottom: 20px;
@@ -169,16 +256,18 @@ footer {
   background-color: #000;
 }
 
+.form-text {
+  color: white;
+}
+
 /* esto modifica el boton de enviar en el form de la pagina de contactos para que el estilo sea igual al de la página */
 .btn-color {
   background-color: #ffd901;
 }
-
-.btn-color:hover {
+.btn-color .btn-color:hover {
   background-color: #b69b01;
 }
-
-.btn-color:active {
+.btn-color .btn-color:active {
   background-color: #ffd901;
 }
 
@@ -193,10 +282,14 @@ span p {
   font-weight: bold;
   justify-content: left;
   margin: 5px 5px 20px 5px;
+  padding: 13px;
+  display: inline-flex;
+  background-image: linear-gradient(to right, black, #1f1e1e);
+  color: gray;
 }
 
 .redaction {
-  justify-content: right;
+  justify-content: left;
   text-decoration: underline;
 }
 
@@ -208,6 +301,7 @@ span p {
   grid-template-rows: 3fr 3fr;
   row-gap: 10px;
   column-gap: 10px;
+  padding-bottom: 15px;
 }
 
 .grid-container-animales img {
@@ -222,6 +316,7 @@ span p {
   grid-template-rows: 4fr;
   column-gap: 10px;
   row-gap: 10px;
+  padding-bottom: 15px;
 }
 
 .grid-container-ciencia img {
@@ -254,6 +349,7 @@ span p {
   grid-template-rows: 3fr 3fr;
   row-gap: 10px;
   column-gap: 10px;
+  padding-bottom: 15px;
 }
 
 .grid-container-medio img {
@@ -276,6 +372,7 @@ img {
 /* le agrega margen a todos los parrafos */
 p {
   margin: 20px;
+  font-weight: 600;
 }
 
 /* esto alinea todo los objetos al centro de la pantalla */
@@ -285,6 +382,10 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+a {
+  overflow: hidden;
 }
 
 .anim-img:hover {
@@ -306,13 +407,18 @@ a {
   animation-duration: 2s;
 }
 
+.anim-banner:hover {
+  transform: scale(1.05, 1.05);
+  transition-duration: 1s;
+  box-shadow: 0px 8px 12px -6px rgba(0, 0, 0, 0.8);
+}
+
 /*fin de animacion de fade in*/
 /* fin de animaciones, si hago un partial para las animaciones no funcionan.*/
 /* esto hace que en cada parte que se utilize el strong se le apliquen estas propiedades. */
 strong {
   padding: 5px;
   background-color: #ffd901;
-  text-decoration: underline;
   text-transform: uppercase;
   margin-right: 10px;
 }
@@ -338,6 +444,9 @@ span p {
 
 /* este media query hace que el header se apile en columna */
 @media only screen and (max-width: 700px) {
+  section.h3 {
+    font-size: 240%;
+  }
   header {
     flex-direction: column;
   }
@@ -396,8 +505,24 @@ span p {
 }
 /* este media query hace que el nav dentro del header pierda el padding para que quede mas compacto y no rompa */
 @media only screen and (max-width: 400px) {
+  h3 {
+    font-size: 200%;
+  }
+  .h2style.strong-h1 {
+    margin: 0;
+    padding: 2px;
+  }
   .navega {
     padding: 0;
+  }
+  p.rights {
+    margin: 0;
+  }
+  img.bottomlogo {
+    padding: 5px;
+  }
+  footer a {
+    margin: 0;
   }
   /* para modifiicar el footer en resoluciones pequeñas, lo coloca en columna */
   .ft-text {

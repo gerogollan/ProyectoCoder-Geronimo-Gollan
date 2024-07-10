@@ -1,18 +1,40 @@
 // Partial dedicado a la pagina principal
 
 
+
+// colores de fondo e secciones
+body{background-image: $gradient;}
+
+main{
+  background-color: white;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+section{
+  background-image: $gradient;
+  color: white;
+
+}
+
+// fin de colores de fondo e secciones
+
+
  /* esto estiliza los h1 */
 h1 {
   border-left: $primary-color 5px solid;
   font-family: "Roboto Condensed", sans-serif; 
 }
 
+h2{
+  font-weight: 700;
+}
 
 //* EXTEND EJEMPLO */
 .h1style {
   @extend h1;
   font-weight: 700; 
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 // EXTEND EJEMPLO 
 
@@ -22,14 +44,18 @@ h1 {
 padding: 0px 0px 20px 0px;
 font-size: large;
 
-  
 }
+
+.strong-h1{
+  margin: 0;
+}
+
  
 /** esto hace que la foto del banner siempre ocupe el 100% del ancho del navegador**/
 .banner {
-    max-width: auto;
-    max-height: 700px;
-    min-width: 100%;
+    width: 100%;
+    height: 363px;
+    object-fit: cover;
     margin-bottom: 20px;}
   
 
@@ -40,19 +66,26 @@ h3 {
     text-decoration: underline $primary-color 5px;
     padding: 20px 0px;
     text-transform: uppercase;
+
+    
   }
-  
+// color de texto apartado ciencia
+  .h3-ciencia{
+      color: #000000;
+    }
+
   .h3-bc {
-    padding: 6px 0;
-    background-image: linear-gradient(to right, black, rgb(31, 30, 30));
+    padding: 10px 0;
+    background-image: $gradient;
   }
   
   /* estilos para el apartado de ciencia del hindex */
   #ciencia {
     padding: 20px 0;
     margin-top: 15px;
-    background-image: linear-gradient(to right, black, rgb(31, 30, 30));
-    color: #fff;
+    background-image:url(../sources/bc-1.jpg) ;
+    background-size: 100% 100%;
+    color: #000000;
     border-bottom: $primary-color 5px solid;
     border-top: $primary-color 5px solid;
   }
@@ -61,8 +94,23 @@ h3 {
   /* esto hace que todos los H3 que esten dentro de un section, tengan un tamaño de fuente de 200% */
 section h3 {
     color: #fff;
-    font-size: 200%;
+    font-size: 300%;
     position: relative;
     top: 10px;
     text-decoration: underline $primary-color 5px;
+  }
+
+  section.section-h3-index{
+    margin-top: 40px;
+  }
+
+
+  @media only screen and (max-width: 400px) {
+
+    .h2style {
+
+    .strong-h1  {
+     margin: 0;
+     padding: 2px;
+   }}
   }
