@@ -1,15 +1,18 @@
 <!DOCTYPE html> <!-- Versión y estructura del documento -->
 <html lang="es"> <!-- Lenguaje usado en la página -->
 
-<!-- 
-    Alumno:Geronimo Gollan
-    Archivo: medio-ambiente.html
-    Correo: gerogollan11@gmail.com
- -->
-
 <head>
+
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- metaetiquetas -->
+<!-- favicon -->
+<link rel="icon" href="../sources/favicon.png" type="image/png" sizes="16x16">
+<!-- fin de favicon -->
+  <meta name="description" content="Descubre información sobre energías renovables y su papel en la lucha contra el cambio climático. Aprende sobre la importancia de la sostenibilidad y la conservación del medio ambiente.">
+  <meta name="keywords" content="National Geographic, medio ambiente, energías renovables, cambio climático, energía solar, energía eólica, energía geotérmica, energía hidroeléctrica, gases de efecto invernadero, sostenibilidad, conservación, ONU, crisis climática, emisiones de carbono, biodiversidad, impacto ambiental">
+  <!-- fin de metaetiquetas -->
 
   <!-- Linkeo a Boostrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -43,16 +46,16 @@
     <nav> <!-- Zona/menú navegable del sitio, permite navegar por distintas secciones -->
       <ul class="navega centro"> <!-- etiqueta de unordened list, clase para estilizar luego en Css-->
         <li><a href="../index.html">INICIO</a></li>
-        <li><a href="../pages/ciencia.html">CIENCIA</a></li>
-        <li><a href="../pages/animales.html">ANIMALES</a></li>
-        <li><a href="../pages/contacto.html">CONTACTO</a></li>
+        <li><a href="ciencia.html">CIENCIA</a></li>
+        <li><a href="animales.html">ANIMALES</a></li>
+        <li><a href="contacto.html">CONTACTO</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Contenido principal con imágenes  y texto-->
   <main>
-    <img class="banner img-fluid" src="../sources/medio-ambiente1.jpg"
+    <img class="banner-pages" src="../sources/medio-ambiente1.jpg"
       alt="Existen diversos tipos de energías renovables, como la solar, eólica, geotérmica e hidroeléctrica. En la imagen de arriba se puede observar una vista aérea de la planta solar fotovoltaica de Kayenta, una instalación de energía renovable en Arizona, Estados Unidos."
       width="100%" height="700px" />
 
@@ -67,9 +70,8 @@
       energía limpia y asequible.
     </h2>
 
-    <p class="credits">FOTOGRAFÍA DE KILIII YÜYAN</p>
-    <p class="redaction">
-      POR REDACCIÓN NATIONAL GEOGRAPHIC <br />
+    <p class="credits flex-container">FOTOGRAFÍA DE KILIII YÜYAN <br>
+      POR REDACCIÓN NATIONAL GEOGRAPHIC <br>
       PUBLICADO 16 ABR 2024, 15:00 GMT-3
     </p>
 
@@ -193,7 +195,7 @@
     </div>
    </section>
   <!--  footer con texto clickeable para volver a la pagina de inicio-->
-  <footer id="footer" class="ft-text">
+  <footer id="footer" class="ft-text ">
     <nav class="contacto">
       <a href="#top">Regresa al inicio de la página</a>
     </nav>

@@ -3,13 +3,29 @@
  /* esto es para que el footer se vea ordenado y estetico */
 
  footer {
+  // color de fondo para el footer 
+  background-image:$gradient ;
+  color: white;
+// esto le da un espaciado para que la imagen no choque con el border, un espaciado interior 
+    padding-top: 10px;
+
+    border-top: white 1px solid;
+
     display:flex;
     /* esto utiliza flexbox para organizar los elementos */
     justify-content: space-between;
     /* esto distribuye los elementos de manera uniforme */
-    align-items: flex-end;
+    align-items: center;
     /* esto centra verticalmente los elementos */
+    padding-bottom: 5px;
+
+    a{
+      margin: 0px 5px 0px 20px;
+      color: white;
+    }
   }
+
+  
 
 /* esto hace que el texto de los footers se mantenga pequeño */
   .ft-text {
@@ -20,10 +36,15 @@
   }
 /* esto coloca a los textos con el id "rights" en el lado derecho de la pagina */
 .rights {
-    margin: 0;
+    margin: 0px 20px 0px 5px;
     text-align: right;
     order: 3;
     /* esto cambia el orden del elemento, lo moverá al lado derecho */
+    // esto le dara un color de fonto
+    background-color: $primary-color;
+    color: black;
+    border: 3px $primary-color;
+    border-radius: 2px;
   }
   
   
@@ -34,9 +55,14 @@
   }
 
   .bottomlogo {
+    padding-bottom: 5px;
+    max-width: 30px;
+    max-height: 50px;
     width: 15%;
     /*esto le da el alto y el ancho para que se vea pequeño y acorde al diseño*/
     height: 7%;
     order: 2;
     /* esto cambia el orden del elemento, lo mantendrá en el centro */
   }
+
+
