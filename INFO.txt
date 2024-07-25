@@ -1,3 +1,7 @@
 ENTREGA FINAL: DESAROLLO WEB
 Alumno: Geronimo Gollan
 Correo: gerogollan11@gmail.com
+
+
+GITHUB PAGES: https://gerogollan.github.io/ProyectoCoder-Geronimo-Gollan/
+FREE HOSTING: http://natgeo.42web.io/?i=1
